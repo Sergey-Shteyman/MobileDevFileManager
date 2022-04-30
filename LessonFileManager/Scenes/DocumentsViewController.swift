@@ -124,7 +124,7 @@ private extension DocumentsViewController {
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
     
-    func setupNavigationBarButtons() -> Void {
+    func setupNavigationBarButtons() {
         let newFolderButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNewFile))
         let newFileButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(createNewFolder))
         self.navigationItem.rightBarButtonItems = [newFolderButton, newFileButton]
@@ -270,7 +270,6 @@ private extension DocumentsViewController {
     }
     
     func setupUITable() {
-        tableView.frame = view.frame
         tableView.myRegister(DocTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self

@@ -19,5 +19,4 @@ class Router: RouterMain {
     init() {
         navigationController = UINavigationController(rootViewController: AuthViewController())
     }
-
 }
